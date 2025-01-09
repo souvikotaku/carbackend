@@ -12,7 +12,9 @@ export const create = async (req, res) => {
 
 export const fetch = async (req, res) => {
   try {
-    return res.json("Hello world");
+    // Fetch all user data from the database
+    const users = await User.find();
+    res.status(200).json(users); // Return the data as a JSON response
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
