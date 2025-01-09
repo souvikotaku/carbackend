@@ -8,8 +8,8 @@ const app = express();
 
 app.use(bodyParser.json());
 dotenv.config();
-const PORT = process.env.PORT || 5000;
-const MONGOURL = process.env.MONGO_URL;
+const PORT = 8000 || 5000;
+const MONGOURL = "mongodb+srv://souvikpunk:manson1@cluster0.h88lc.mongodb.net/";
 
 mongoose
   .connect(MONGOURL)
